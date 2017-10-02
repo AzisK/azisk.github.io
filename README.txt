@@ -1,1 +1,1 @@
-# Interactive Resumes platform by Azis
+Interactive Resumes platform by Azis
