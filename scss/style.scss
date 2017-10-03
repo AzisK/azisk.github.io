@@ -2,12 +2,12 @@ $heading: #33C77B;
 $hover: #EC412C;
 $contact-page: #4448C8;
 $design-page: #82BD43;
-$anime-time: 2s;
 $grey: #ACA2D9;
 $device: #E5E4ED;
 $iphone-button: #D4D2DA;
 $iphone-button-border: #9E9DA3;
 $press-button: #5C5A69;
+
 
 html {
   background: $grey;
@@ -21,29 +21,29 @@ html, body {
 body {
   margin: 0;
   background: $device;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-body, h2, svg, ul {
+* {
   transition: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+.feather {
+  transition: 0;
 }
 
 h1 {
   font-size: 36px;
   letter-spacing: 2px;
+  font-family: 'Indie Flower', cursive;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-
-  li {
-    padding: 2px 10px;
-  }
-
-  :hover {
-    background: $grey;
-  }
+h2 {
+  letter-spacing: 2px;
+  font-family: 'Pangolin', cursive;
 }
 
 .col-30 {
@@ -55,8 +55,23 @@ ul {
   display: none;
 }
 
-svg:hover path {
-  fill: $hover;
+.block {
+  display: block;
+}
+
+.block-svg {
+  margin-right: 0 !important;
+  margin-bottom: 40px;
+}
+
+svg {
+  &:hover path {
+    fill: $hover;
+  }
+
+  &.details {
+    width: 42px;
+  }
 }
 
 .feather:hover {
@@ -64,6 +79,19 @@ svg:hover path {
 
   path {
     fill: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    padding: 2px 10px;
+  }
+
+  li:hover {
+    background: $grey;
   }
 }
 
@@ -79,6 +107,14 @@ svg:hover path {
 }
 
 .page {
+  h2 {
+    position: relative;
+    top: 30px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+  }
+
   div {
     svg {
       width: 64px;
@@ -95,7 +131,6 @@ svg:hover path {
   }
 }
 
-
 .heading {
   position: absolute;
   top: 50px;
@@ -105,7 +140,6 @@ svg:hover path {
   .heading-top {
     left: 0;
     width: 75%;
-    animation: heading-top $anime-time ease-in-out;
 
     h1 {
       color: $heading;
@@ -118,7 +152,6 @@ svg:hover path {
       margin: 5px;
       font-size: 36px;
       letter-spacing: 2px;
-      animation: heading-bottom $anime-time ease-in-out;
     }
     :hover {
       color: $hover;
@@ -214,6 +247,7 @@ svg:hover path {
 
     svg {
       vertical-align: middle;
+      width: 24px;
     }
 
     a {
@@ -253,37 +287,4 @@ svg:hover path {
   border: 8px solid $device;
   border-radius: 10px;
   padding-bottom: 50px;
-}
-
-@media (max-width: 320px) {
-  .iphone-button {
-    display: none;
-  }
-}
-
-@media (max-height: 678px) {
-  .mobile-view {
-    transform: none;
-  }
-}
-
-@keyframes heading-top {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-
-@keyframes heading-bottom {
-  0% {
-    font-size: 24px;
-  }
-  0% {
-    font-size: 30px;
-  }
-  100% {
-    text-align: 36px;
-  }
 }

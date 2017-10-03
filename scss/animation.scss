@@ -1,0 +1,27 @@
+$anime-time: 1.7s;
+
+.increase-font {
+  animation: increase-font $anime-time ease-in-out;
+} 
+
+.increase-width {
+  animation: increase-width $anime-time ease-in-out;
+}
+
+@keyframes increase-width {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes increase-font {
+  0% {
+    font-size: 24px;
+  }
+  100% {
+    text-align: 36px;
+  }
+}

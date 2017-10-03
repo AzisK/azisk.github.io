@@ -8,22 +8,24 @@ html, body {
 body {
   margin: 0;
   background: #E5E4ED; }
+  body ::-webkit-scrollbar {
+    display: none; }
 
-body, h2, svg, ul {
+* {
   transition: 200ms;
   transition-timing-function: ease-in-out; }
 
+.feather {
+  transition: 0; }
+
 h1 {
   font-size: 36px;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-family: 'Indie Flower', cursive; }
 
-ul {
-  list-style-type: none;
-  padding: 0; }
-  ul li {
-    padding: 2px 10px; }
-  ul :hover {
-    background: #ACA2D9; }
+h2 {
+  letter-spacing: 2px;
+  font-family: 'Pangolin', cursive; }
 
 .col-30 {
   width: 30%;
@@ -32,13 +34,30 @@ ul {
 .hidden {
   display: none; }
 
+.block {
+  display: block; }
+
+.block-svg {
+  margin-right: 0 !important;
+  margin-bottom: 40px; }
+
 svg:hover path {
   fill: #EC412C; }
+svg.details {
+  width: 42px; }
 
 .feather:hover {
   stroke: #EC412C; }
   .feather:hover path {
     fill: none; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+  ul li {
+    padding: 2px 10px; }
+  ul li:hover {
+    background: #ACA2D9; }
 
 .main, .html {
   position: relative;
@@ -49,6 +68,12 @@ svg:hover path {
 .html {
   overflow-y: auto; }
 
+.page h2 {
+  position: relative;
+  top: 30px;
+  margin: auto;
+  text-align: center;
+  color: #fff; }
 .page div svg {
   width: 64px;
   margin-right: 40px; }
@@ -64,16 +89,14 @@ svg:hover path {
   text-align: center; }
   .heading .heading-top {
     left: 0;
-    width: 75%;
-    animation: heading-top 2s ease-in-out; }
+    width: 75%; }
     .heading .heading-top h1 {
       color: #33C77B;
       margin-bottom: 5px; }
   .heading .heading-bottom h2 {
     margin: 5px;
     font-size: 36px;
-    letter-spacing: 2px;
-    animation: heading-bottom 2s ease-in-out; }
+    letter-spacing: 2px; }
   .heading .heading-bottom :hover {
     color: #EC412C; }
 
@@ -137,7 +160,8 @@ svg:hover path {
     font-size: 24px;
     margin: 0; }
     .footer p svg {
-      vertical-align: middle; }
+      vertical-align: middle;
+      width: 24px; }
     .footer p a {
       text-decoration: none; }
 
@@ -169,24 +193,5 @@ svg:hover path {
   border: 8px solid #E5E4ED;
   border-radius: 10px;
   padding-bottom: 50px; }
-
-@media (max-width: 320px) {
-  .iphone-button {
-    display: none; } }
-@media (max-height: 678px) {
-  .mobile-view {
-    transform: none; } }
-@keyframes heading-top {
-  0% {
-    width: 50%; }
-  100% {
-    width: 75%; } }
-@keyframes heading-bottom {
-  0% {
-    font-size: 24px; }
-  0% {
-    font-size: 30px; }
-  100% {
-    text-align: 36px; } }
 
 /*# sourceMappingURL=style.css.map */

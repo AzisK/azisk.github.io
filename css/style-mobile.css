@@ -1,0 +1,15 @@
+@media (max-width: 414px) {
+  .iphone-button {
+    display: none; }
+
+  .xs-block {
+    display: block; }
+
+  .mobile-svg {
+    margin-right: 0 !important;
+    margin-bottom: 40px; } }
+@media (max-height: 678px) {
+  .mobile-view {
+    transform: none; } }
+
+/*# sourceMappingURL=style-mobile.css.map */

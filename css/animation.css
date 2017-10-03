@@ -1,0 +1,18 @@
+.increase-font {
+  animation: increase-font 1.7s ease-in-out; }
+
+.increase-width {
+  animation: increase-width 1.7s ease-in-out; }
+
+@keyframes increase-width {
+  0% {
+    width: 50%; }
+  100% {
+    width: 75%; } }
+@keyframes increase-font {
+  0% {
+    font-size: 24px; }
+  100% {
+    text-align: 36px; } }
+
+/*# sourceMappingURL=animation.css.map */
