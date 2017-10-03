@@ -64,6 +64,10 @@ h2 {
   margin-bottom: 40px;
 }
 
+.cursor {
+  cursor: url(../circle.svg) 12 12, auto;
+}
+
 svg {
   &:hover path {
     fill: $hover;

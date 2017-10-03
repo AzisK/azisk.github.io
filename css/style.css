@@ -41,6 +41,9 @@ h2 {
   margin-right: 0 !important;
   margin-bottom: 40px; }
 
+.cursor {
+  cursor: url(../circle.svg) 12 12, auto; }
+
 svg:hover path {
   fill: #EC412C; }
 svg.details {
