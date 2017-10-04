@@ -1,5 +1,11 @@
 html {
-  background: #ACA2D9; }
+  background: #ACA2D9;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 html, body {
   height: 100%;
@@ -25,7 +31,8 @@ h1 {
 
 h2 {
   letter-spacing: 2px;
-  font-family: 'Pangolin', cursive; }
+  font-family: 'Pangolin', cursive;
+  font-size: 36px; }
 
 .col-30 {
   width: 30%;
@@ -34,15 +41,20 @@ h2 {
 .hidden {
   display: none; }
 
-.block {
-  display: block; }
+.block-mobile {
+  display: block;
+  width: 100px;
+  margin: auto; }
 
 .block-svg {
   margin-right: 0 !important;
   margin-bottom: 40px; }
 
 .cursor {
-  cursor: url(../circle.svg) 12 12, auto; }
+  cursor: url(../img/touch-cursor.svg) 12 12, auto; }
+
+.cursor:active {
+  cursor: url(../img/touch-cursor-active.svg) 12 12, auto; }
 
 svg:hover path {
   fill: #EC412C; }
@@ -98,7 +110,6 @@ ul {
       margin-bottom: 5px; }
   .heading .heading-bottom h2 {
     margin: 5px;
-    font-size: 36px;
     letter-spacing: 2px; }
   .heading .heading-bottom :hover {
     color: #EC412C; }

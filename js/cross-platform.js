@@ -3,7 +3,7 @@ var animatedText = false;
 
 for (var i = 0; i < goDesign.length; i++) {
   goDesign[i].onclick = function () {
-     scrollDesign();
+     scrollIn(designPage);
      if (!animatedText) {
       animateText('#cross-platform', 'Cross-platform', 0, 110);
       animatedText = true;
@@ -19,7 +19,6 @@ var views = [mobile, tablet, desktop];
 var deviceMode = 'desktop';
 
 var body = document.body;
-var html = document.querySelector('.html');
 var iphoneButton = document.querySelector('.iphone-button');
 var mobileBlocks = document.querySelectorAll('.xs-block');
 var footerLink = document.querySelector('.footer a');
@@ -31,11 +30,11 @@ mobileBlocks.forEach(function (el) {
 var mobileView = function (on) {
   mobileBlocks.forEach(function (el) {
     if (on == 1) {
-      el.classList.add('block');
+      el.classList.add('block-mobile');
       el.querySelector('svg').classList.add('block-svg');
     } else {
-      if (el.classList.contains('block')) {
-        el.classList.remove('block');
+      if (el.classList.contains('block-mobile')) {
+        el.classList.remove('block-mobile');
         el.querySelector('svg').classList.remove('block-svg');
       }
     }
@@ -83,7 +82,7 @@ function deviceView (device) {
   var deviceMode = device.classList[0] + '-view';
   var currentMode = body.classList[0];
   responsiveView(currentMode, deviceMode);  
-  scrollTop();
+  scrollIn(main);
 };
 
 (function addViews () {
@@ -95,7 +94,7 @@ function deviceView (device) {
 }());
 
 iphoneButton.onclick = function () {
-  scrollTop();
+  scrollIn(main);
 }
 
 

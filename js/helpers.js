@@ -1,12 +1,10 @@
 var main = document.querySelector('.main');
 var designPage = document.querySelector('.design-page');
+var html = document.querySelector('.html');
 
-var scrollTop = function () {
-  main.scrollIntoView({ behavior: "smooth"});
+var scrollIn = function (div) {
+  div.scrollIntoView({ behavior: "smooth"});
 };
-var scrollDesign = function () {
-  designPage.scrollIntoView({ behavior: "smooth"});
-}
 
 var animateText = function (target, message, index, interval) { 
   var targetSelector = document.querySelector(target);

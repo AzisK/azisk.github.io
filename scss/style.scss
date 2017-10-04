@@ -11,6 +11,12 @@ $press-button: #5C5A69;
 
 html {
   background: $grey;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html, body {
@@ -44,6 +50,7 @@ h1 {
 h2 {
   letter-spacing: 2px;
   font-family: 'Pangolin', cursive;
+  font-size: 36px;
 }
 
 .col-30 {
@@ -55,8 +62,10 @@ h2 {
   display: none;
 }
 
-.block {
+.block-mobile {
   display: block;
+  width: 100px;
+  margin: auto;
 }
 
 .block-svg {
@@ -65,8 +74,13 @@ h2 {
 }
 
 .cursor {
-  cursor: url(../circle.svg) 12 12, auto;
+  cursor: url(../img/touch-cursor.svg) 12 12, auto;
 }
+
+.cursor:active {
+  cursor: url(../img/touch-cursor-active.svg) 12 12, auto;
+} 
+
 
 svg {
   &:hover path {
@@ -154,7 +168,6 @@ ul {
   .heading-bottom {
     h2 {
       margin: 5px;
-      font-size: 36px;
       letter-spacing: 2px;
     }
     :hover {
