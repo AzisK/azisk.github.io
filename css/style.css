@@ -25,7 +25,7 @@ body {
   transition: 0; }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
   letter-spacing: 2px;
   font-family: 'Indie Flower', cursive; }
 
@@ -41,6 +41,9 @@ h2 {
 .hidden {
   display: none; }
 
+.inline-block {
+  display: inline-block; }
+
 .block-mobile {
   display: block;
   width: 100px;
@@ -50,21 +53,35 @@ h2 {
   margin-right: 0 !important;
   margin-bottom: 40px; }
 
-.cursor {
+.touch-cursor {
   cursor: url(../img/touch-cursor.svg) 12 12, auto; }
 
-.cursor:active {
+.touch-cursor:active {
   cursor: url(../img/touch-cursor-active.svg) 12 12, auto; }
+
+.hover-color:hover {
+  color: #EC412C; }
 
 svg:hover path {
   fill: #EC412C; }
-svg.details {
-  width: 42px; }
 
-.feather:hover {
+svg.feather:hover {
   stroke: #EC412C; }
-  .feather:hover path {
+  svg.feather:hover path {
     fill: none; }
+
+.main-page svg.feather {
+  fill: none;
+  stroke: #fff; }
+
+.main-page svg {
+  fill: #fff; }
+
+.resume svg {
+  width: 48px; }
+
+.arrow {
+  width: 42px; }
 
 ul {
   list-style-type: none;
@@ -74,51 +91,61 @@ ul {
   ul li:hover {
     background: #ACA2D9; }
 
-.main, .html {
+.main-page, .html {
   position: relative;
   height: 100%;
-  width: 100%;
-  background: #fff; }
+  width: 100%; }
+
+.main-page {
+  background: #111111;
+  color: #fff; }
 
 .html {
-  overflow-y: auto; }
+  overflow-y: auto;
+  background: #fff; }
 
+.page div :last-child svg {
+  margin: 0; }
 .page h2 {
-  position: relative;
+  position: absolute;
   top: 30px;
+  width: 100%;
   margin: auto;
   text-align: center;
   color: #fff; }
-.page div svg {
+.page svg {
   width: 64px;
   margin-right: 40px; }
-.page div svg:hover {
+.page svg:hover {
   width: 100px; }
-.page div :last-child svg {
-  margin: 0; }
 
 .heading {
   position: absolute;
-  top: 50px;
+  height: 120px;
   width: 100%;
-  text-align: center; }
-  .heading .heading-top {
-    left: 0;
-    width: 75%; }
-    .heading .heading-top h1 {
-      color: #33C77B;
-      margin-bottom: 5px; }
-  .heading .heading-bottom h2 {
-    margin: 5px;
-    letter-spacing: 2px; }
-  .heading .heading-bottom :hover {
-    color: #EC412C; }
+  text-align: center;
+  background: #244ad6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #244ad6 0%, #19e876 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #244ad6 0%, #19e876 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #244ad6 0%, #19e876 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#244ad6', endColorstr='#19e876',GradientType=1);
+  /* IE6-9 */ }
+  .heading h1, .heading h2 {
+    margin: 0;
+    display: inline-block; }
+  .heading h1 {
+    margin-top: 20px;
+    margin-right: 40px; }
 
 .resume {
-  height: 70%;
-  top: 30%;
-  position: relative;
-  margin: 0 20px; }
+  height: calc(100% - 120px);
+  width: 100%;
+  top: 120px;
+  position: absolute; }
   .resume div ul {
     display: none;
     overflow-y: auto; }
@@ -136,11 +163,14 @@ ul {
     font-size: 24px; }
   .resume :hover ul {
     display: block; }
-  .resume svg {
-    vertical-align: middle;
-    width: 36px; }
 
-.details {
+.curriculum {
+  position: relative;
+  top: 20px;
+  padding: 0 60px;
+  text-align: center; }
+
+.bottom-right {
   position: absolute;
   right: 20px;
   bottom: 20px; }
@@ -168,16 +198,15 @@ ul {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
-  background: #fff; }
+  text-align: center; }
   .footer p {
     font-size: 24px;
     margin: 0; }
-    .footer p svg {
-      vertical-align: middle;
-      width: 24px; }
-    .footer p a {
-      text-decoration: none; }
+  .footer svg {
+    vertical-align: middle;
+    width: 24px; }
+  .footer a {
+    text-decoration: none; }
 
 .iphone-button {
   width: 40px;

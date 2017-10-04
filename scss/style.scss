@@ -1,16 +1,15 @@
-$heading: #33C77B;
-$hover: #EC412C;
+$hover-color: #EC412C;
 $contact-page: #4448C8;
 $design-page: #82BD43;
-$grey: #ACA2D9;
-$device: #E5E4ED;
-$iphone-button: #D4D2DA;
-$iphone-button-border: #9E9DA3;
-$press-button: #5C5A69;
-
+$greyviolet: #ACA2D9;
+$device-color: #E5E4ED;
+$iphone-button-color: #D4D2DA;
+$iphone-button-border-color: #9E9DA3;
+$press-button-color: #5C5A69;
+$resume-height: calc(100% - 120px);
 
 html {
-  background: $grey;
+  background: $greyviolet;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -26,7 +25,7 @@ html, body {
 
 body {
   margin: 0;
-  background: $device;
+  background: $device-color;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -42,7 +41,7 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
   letter-spacing: 2px;
   font-family: 'Indie Flower', cursive;
 }
@@ -62,6 +61,10 @@ h2 {
   display: none;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .block-mobile {
   display: block;
   width: 100px;
@@ -73,31 +76,46 @@ h2 {
   margin-bottom: 40px;
 }
 
-.cursor {
+.touch-cursor {
   cursor: url(../img/touch-cursor.svg) 12 12, auto;
 }
 
-.cursor:active {
+.touch-cursor:active {
   cursor: url(../img/touch-cursor-active.svg) 12 12, auto;
+}
+
+.hover-color:hover {
+  color: $hover-color;
 } 
 
 
-svg {
-  &:hover path {
-    fill: $hover;
-  }
-
-  &.details {
-    width: 42px;
-  }
+svg:hover path {
+  fill: $hover-color;
 }
 
-.feather:hover {
-  stroke: $hover;
+svg.feather:hover {
+  stroke: $hover-color;
 
   path {
     fill: none;
   }
+}
+
+.main-page svg.feather {
+  fill: none;
+  stroke: #fff;
+}
+
+.main-page svg {
+  fill: #fff;
+}
+
+.resume svg {
+  width: 48px;
+}
+
+.arrow  {
+  width: 42px;
 }
 
 ul {
@@ -109,78 +127,79 @@ ul {
   }
 
   li:hover {
-    background: $grey;
+    background: $greyviolet;
   }
 }
 
-.main, .html {
+.main-page, .html {
   position: relative;
   height: 100%;
   width: 100%;
-  background: #fff;
+}
+
+.main-page {
+  background: #111111;
+  color: #fff;
 }
 
 .html {
   overflow-y: auto;
+  background: #fff;
 }
 
 .page {
+  div :last-child svg {
+    margin: 0;
+  }
+
   h2 {
-    position: relative;
+    position: absolute;
     top: 30px;
+    width: 100%;
     margin: auto;
     text-align: center;
     color: #fff;
   }
 
-  div {
-    svg {
-      width: 64px;
-      margin-right: 40px;
-    }
-
-    svg:hover {
-      width: 100px;
-    }
-
-    :last-child svg {
-      margin: 0;
-    }
+  svg {
+    width: 64px;
+    margin-right: 40px;
   }
+
+  svg:hover {
+    width: 100px;
+  }
+
+  
 }
 
 .heading {
   position: absolute;
-  top: 50px;
+  height: 120px;
   width: 100%;
   text-align: center;
+  background: #244ad6; /* Old browsers */
+  background: -moz-linear-gradient(left,  #244ad6 0%, #19e876 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #244ad6 0%,#19e876 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #244ad6 0%,#19e876 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#244ad6', endColorstr='#19e876',GradientType=1); /* IE6-9 */
 
-  .heading-top {
-    left: 0;
-    width: 75%;
-
-    h1 {
-      color: $heading;
-      margin-bottom: 5px;
-    }
+  h1, h2 {
+    margin: 0;
+    display: inline-block;
   }
 
-  .heading-bottom {
-    h2 {
-      margin: 5px;
-      letter-spacing: 2px;
-    }
-    :hover {
-      color: $hover;
-    }
+  h1  {
+    margin-top: 20px;
+    margin-right: 40px; 
   }
 }
 
 .resume {
-  height: 70%;
-  top: 30%;
-  position: relative;
-  margin: 0 20px;
+  height: $resume-height;
+  width: 100%;
+  top: 120px;
+  position: absolute;
 
   div {
     ul {
@@ -213,14 +232,16 @@ ul {
   :hover ul {
     display: block;
   }
-
-  svg {
-    vertical-align: middle;
-    width: 36px;
-  }
 }
 
-.details {
+.curriculum {
+  position: relative;
+  top: 20px;
+  padding: 0 60px;
+  text-align: center;
+}
+
+.bottom-right {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -256,20 +277,19 @@ ul {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background: #fff;
 
   p {
     font-size: 24px;
     margin: 0;
+  }
 
-    svg {
-      vertical-align: middle;
-      width: 24px;
-    }
+  svg {
+    vertical-align: middle;
+    width: 24px;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
   }
 }
 
@@ -277,21 +297,21 @@ ul {
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  border: 4px solid $iphone-button-border;
-  background: $iphone-button;
+  border: 4px solid $iphone-button-border-color;
+  background: $iphone-button-color;
   margin: auto;
   margin-top: 4px;
 }
 
 .iphone-button:hover {
-  background: $press-button;
+  background: $press-button-color;
 }
 
 .mobile-view {
   width: 320px;
   height: 568px;
   margin: auto;
-  border: 8px solid $device;
+  border: 8px solid $device-color;
   border-radius: 10px;
   padding-bottom: 50px;
   transform: translateY(50px);
@@ -301,7 +321,7 @@ ul {
   width: 768px;
   height: 1024px;
   margin: auto;
-  border: 8px solid $device;
+  border: 8px solid $device-color;
   border-radius: 10px;
   padding-bottom: 50px;
 }

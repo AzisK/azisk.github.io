@@ -1,4 +1,25 @@
 @media (max-width: 414px) {
+  .heading {
+    h1, h2 {
+      margin: 0;
+      display: block;
+    }
+  }
+
+  .resume svg {
+    width: 42px;
+  }
+
+  .curriculum {
+    :first-child {
+      text-align: left;
+    }
+
+    :last-child {
+      text-align: right;
+    }
+  }
+
   .iphone-button {
     display: none;
   }

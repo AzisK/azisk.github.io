@@ -1,12 +1,11 @@
 var goDesign = document.querySelectorAll('.go-design');
-var animatedText = false;
 
 for (var i = 0; i < goDesign.length; i++) {
   goDesign[i].onclick = function () {
      scrollIn(designPage);
      if (!animatedText) {
-      animateText('#cross-platform', 'Cross-platform', 0, 110);
       animatedText = true;
+      animateText('#cross-platform', 'Cross-platform', 0, 110);
      }
   };
 }
@@ -43,14 +42,14 @@ var mobileView = function (on) {
 
 var touchView = function (on) {
   if (on == 1) {
-    if (!html.classList.contains('cursor')) {
+    if (!html.classList.contains('touch-cursor')) {
       touchElements.forEach(function (el) {
-        el.classList.add('cursor');
+        el.classList.add('touch-cursor');
       });
     }
   } else {
     touchElements.forEach(function (el) {
-      el.classList.remove('cursor');
+      el.classList.remove('touch-cursor');
     });
   }
 }
@@ -82,7 +81,7 @@ function deviceView (device) {
   var deviceMode = device.classList[0] + '-view';
   var currentMode = body.classList[0];
   responsiveView(currentMode, deviceMode);  
-  scrollIn(main);
+  scrollIn(mainPage);
 };
 
 (function addViews () {
@@ -94,7 +93,7 @@ function deviceView (device) {
 }());
 
 iphoneButton.onclick = function () {
-  scrollIn(main);
+  scrollIn(mainPage);
 }
 
 
