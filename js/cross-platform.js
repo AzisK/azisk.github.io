@@ -27,17 +27,28 @@ mobileBlocks.forEach(function (el) {
 });
 
 var mobileView = function (on) {
+  var mobile;
   mobileBlocks.forEach(function (el) {
     if (on == 1) {
+      mobile = true
       el.classList.add('block-mobile');
       el.querySelector('svg').classList.add('block-svg');
     } else {
+      mobile = false;
       if (el.classList.contains('block-mobile')) {
         el.classList.remove('block-mobile');
         el.querySelector('svg').classList.remove('block-svg');
       }
     }
   });
+  var heading = document.querySelector('.heading h1');
+  if (mobile) {
+    heading.classList.add('mobile-heading');
+  } else {
+    if (heading.classList.contains('mobile-heading')) {
+      heading.classList.remove('mobile-heading');
+    }
+  }
 }
 
 var touchView = function (on) {
@@ -95,6 +106,3 @@ function deviceView (device) {
 iphoneButton.onclick = function () {
   scrollIn(mainPage);
 }
-
-
-

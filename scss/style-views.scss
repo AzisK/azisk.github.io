@@ -1,0 +1,61 @@
+$iphone-button-color: #D4D2DA;
+$iphone-button-border-color: #9E9DA3;
+$press-button-color: #5C5A69;
+$device-color: #E5E4ED;
+
+.touch-cursor {
+  cursor: url(../img/touch-cursor.svg) 12 12, auto;
+}
+
+.touch-cursor:active {
+  cursor: url(../img/touch-cursor-active.svg) 12 12, auto;
+}
+
+.block-mobile {
+  display: block;
+  width: 100px;
+  margin: auto;
+}
+
+.block-svg {
+  margin-right: 0 !important;
+  margin-bottom: 40px;
+}
+
+.iphone-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 4px solid $iphone-button-border-color;
+  background: $iphone-button-color;
+  margin: auto;
+  margin-top: 4px;
+}
+
+.iphone-button:hover {
+  background: $press-button-color;
+}
+
+.mobile-view {
+  width: 320px;
+  height: 568px;
+  margin: auto;
+  border: 8px solid $device-color;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  transform: translateY(50px);
+}
+
+.mobile-heading {
+  margin: 0 !important;
+  display: block !important;
+}
+
+.tablet-view {
+  width: 768px;
+  height: 1024px;
+  margin: auto;
+  border: 8px solid $device-color;
+  border-radius: 10px;
+  padding-bottom: 50px;
+}

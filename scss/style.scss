@@ -3,9 +3,6 @@ $contact-page: #4448C8;
 $design-page: #82BD43;
 $greyviolet: #ACA2D9;
 $device-color: #E5E4ED;
-$iphone-button-color: #D4D2DA;
-$iphone-button-border-color: #9E9DA3;
-$press-button-color: #5C5A69;
 $resume-height: calc(100% - 120px);
 
 html {
@@ -36,10 +33,6 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.feather {
-  transition: 0;
-}
-
 h1 {
   font-size: 42px;
   letter-spacing: 2px;
@@ -65,28 +58,24 @@ h2 {
   display: inline-block;
 }
 
-.block-mobile {
-  display: block;
-  width: 100px;
-  margin: auto;
-}
-
-.block-svg {
-  margin-right: 0 !important;
-  margin-bottom: 40px;
-}
-
-.touch-cursor {
-  cursor: url(../img/touch-cursor.svg) 12 12, auto;
-}
-
-.touch-cursor:active {
-  cursor: url(../img/touch-cursor-active.svg) 12 12, auto;
-}
-
 .hover-color:hover {
   color: $hover-color;
 } 
+
+svg.feather {
+  path {
+    fill: none;
+  }
+
+  stroke: #fff;
+  fill: none
+}
+
+svg {
+  path {
+    fill: #fff;
+  }
+}
 
 
 svg:hover path {
@@ -101,24 +90,40 @@ svg.feather:hover {
   }
 }
 
-.main-page svg.feather {
-  fill: none;
-  stroke: #fff;
-}
-
-.main-page svg {
-  fill: #fff;
-}
-
 .resume svg {
   width: 48px;
+  &.feather:hover {
+    width: 56px;
+  }
+}
+
+.page {
+  svg {
+    width: 64px;
+    margin-right: 40px;
+  }
+
+  svg:hover {
+    width: 100px;
+  } 
+}
+
+.footer {
+  svg {
+    vertical-align: middle;
+    width: 24px;
+
+    path {
+      fill: #000;
+    }
+  }
 }
 
 .arrow  {
   width: 42px;
 }
 
-ul {
+/*ul {
   list-style-type: none;
   padding: 0;
 
@@ -129,7 +134,7 @@ ul {
   li:hover {
     background: $greyviolet;
   }
-}
+}*/
 
 .main-page, .html {
   position: relative;
@@ -159,18 +164,7 @@ ul {
     margin: auto;
     text-align: center;
     color: #fff;
-  }
-
-  svg {
-    width: 64px;
-    margin-right: 40px;
-  }
-
-  svg:hover {
-    width: 100px;
-  }
-
-  
+  } 
 }
 
 .heading {
@@ -221,7 +215,7 @@ ul {
     }
   }
 
-  :hover svg {
+  /*:hover svg {
     width: 48px;
   }
 
@@ -231,7 +225,7 @@ ul {
 
   :hover ul {
     display: block;
-  }
+  }*/
 }
 
 .curriculum {
@@ -283,45 +277,7 @@ ul {
     margin: 0;
   }
 
-  svg {
-    vertical-align: middle;
-    width: 24px;
-  }
-
   a {
     text-decoration: none;
   }
-}
-
-.iphone-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 4px solid $iphone-button-border-color;
-  background: $iphone-button-color;
-  margin: auto;
-  margin-top: 4px;
-}
-
-.iphone-button:hover {
-  background: $press-button-color;
-}
-
-.mobile-view {
-  width: 320px;
-  height: 568px;
-  margin: auto;
-  border: 8px solid $device-color;
-  border-radius: 10px;
-  padding-bottom: 50px;
-  transform: translateY(50px);
-}
-
-.tablet-view {
-  width: 768px;
-  height: 1024px;
-  margin: auto;
-  border: 8px solid $device-color;
-  border-radius: 10px;
-  padding-bottom: 50px;
 }

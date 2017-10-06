@@ -21,9 +21,6 @@ body {
   transition: 200ms;
   transition-timing-function: ease-in-out; }
 
-.feather {
-  transition: 0; }
-
 h1 {
   font-size: 42px;
   letter-spacing: 2px;
@@ -44,23 +41,17 @@ h2 {
 .inline-block {
   display: inline-block; }
 
-.block-mobile {
-  display: block;
-  width: 100px;
-  margin: auto; }
-
-.block-svg {
-  margin-right: 0 !important;
-  margin-bottom: 40px; }
-
-.touch-cursor {
-  cursor: url(../img/touch-cursor.svg) 12 12, auto; }
-
-.touch-cursor:active {
-  cursor: url(../img/touch-cursor-active.svg) 12 12, auto; }
-
 .hover-color:hover {
   color: #EC412C; }
+
+svg.feather {
+  stroke: #fff;
+  fill: none; }
+  svg.feather path {
+    fill: none; }
+
+svg path {
+  fill: #fff; }
 
 svg:hover path {
   fill: #EC412C; }
@@ -70,27 +61,38 @@ svg.feather:hover {
   svg.feather:hover path {
     fill: none; }
 
-.main-page svg.feather {
-  fill: none;
-  stroke: #fff; }
-
-.main-page svg {
-  fill: #fff; }
-
 .resume svg {
   width: 48px; }
+  .resume svg.feather:hover {
+    width: 56px; }
+
+.page svg {
+  width: 64px;
+  margin-right: 40px; }
+.page svg:hover {
+  width: 100px; }
+
+.footer svg {
+  vertical-align: middle;
+  width: 24px; }
+  .footer svg path {
+    fill: #000; }
 
 .arrow {
   width: 42px; }
 
-ul {
+/*ul {
   list-style-type: none;
-  padding: 0; }
-  ul li {
-    padding: 2px 10px; }
-  ul li:hover {
-    background: #ACA2D9; }
+  padding: 0;
 
+  li {
+    padding: 2px 10px;
+  }
+
+  li:hover {
+    background: $greyviolet;
+  }
+}*/
 .main-page, .html {
   position: relative;
   height: 100%;
@@ -113,11 +115,6 @@ ul {
   margin: auto;
   text-align: center;
   color: #fff; }
-.page svg {
-  width: 64px;
-  margin-right: 40px; }
-.page svg:hover {
-  width: 100px; }
 
 .heading {
   position: absolute;
@@ -145,7 +142,18 @@ ul {
   height: calc(100% - 120px);
   width: 100%;
   top: 120px;
-  position: absolute; }
+  position: absolute;
+  /*:hover svg {
+    width: 48px;
+  }
+
+  :hover svg + div {
+    font-size: 24px;
+  }
+
+  :hover ul {
+    display: block;
+  }*/ }
   .resume div ul {
     display: none;
     overflow-y: auto; }
@@ -157,12 +165,6 @@ ul {
     .resume div div h2 {
       margin: 5px 0;
       padding-left: 5px; }
-  .resume :hover svg {
-    width: 48px; }
-  .resume :hover svg + div {
-    font-size: 24px; }
-  .resume :hover ul {
-    display: block; }
 
 .curriculum {
   position: relative;
@@ -202,39 +204,7 @@ ul {
   .footer p {
     font-size: 24px;
     margin: 0; }
-  .footer svg {
-    vertical-align: middle;
-    width: 24px; }
   .footer a {
     text-decoration: none; }
-
-.iphone-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 4px solid #9E9DA3;
-  background: #D4D2DA;
-  margin: auto;
-  margin-top: 4px; }
-
-.iphone-button:hover {
-  background: #5C5A69; }
-
-.mobile-view {
-  width: 320px;
-  height: 568px;
-  margin: auto;
-  border: 8px solid #E5E4ED;
-  border-radius: 10px;
-  padding-bottom: 50px;
-  transform: translateY(50px); }
-
-.tablet-view {
-  width: 768px;
-  height: 1024px;
-  margin: auto;
-  border: 8px solid #E5E4ED;
-  border-radius: 10px;
-  padding-bottom: 50px; }
 
 /*# sourceMappingURL=style.css.map */
