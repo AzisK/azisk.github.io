@@ -20,33 +20,38 @@
   </div>
   <div class="resume">
     <div class="resume-nav">
-      <div class="study col-30">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather">
+      <div class="education col-30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
       </div>
-      <div class="col-30">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><rect x="10" y="3" width="4" height="18"></rect><rect x="18" y="8" width="4" height="13"></rect><rect x="2" y="13" width="4" height="8"></rect></svg>
-        <!-- <ul class="work-list"></ul> -->
-        <!-- <ul class="education-list"></ul> -->
+      <div class="jobs col-30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather">
+          <rect x="10" y="3" width="4" height="18"></rect>
+          <rect x="18" y="8" width="4" height="13"></rect>
+          <rect x="2" y="13" width="4" height="8"></rect>
+        </svg>
       </div>
-       <div class="col-30">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather">
+       <div class="life col-30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather">
           <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
         </svg>
       </div>
     </div>
     <div class="resume-content">
-      <h1>
-        education
-      </h1>
-      <ul>
-        <li><h3>Informatics MS @ KTU, 2016-2018</h3></li>
-        <li><h3>Physics BS @ KTU, 2012-2016</h3></li>
-        <li><h3>Erasmus studies @ Bilkent, 2014-2015 fall</h3></li>
-        <li><h3>Erasmus studies @ Trieste, 2015-2016 fall</h3></li>
-      </ul>
+      <h1 class="js-list-head"></h1>
+      <div class="resume-content-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  class="feather">
+          <line x1="20" y1="12" x2="4" y2="12"></line>
+          <polyline points="10 18 4 12 10 6"></polyline>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <polyline points="14 6 20 12 14 18"></polyline>
+        </svg>
+      </div>
+      <ul class="js-list"></ul>
     </div>
   </div>
   <svg class="bottom-right arrow go-design" viewBox="0 0 24 24">
@@ -62,15 +67,13 @@
           <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" />
         </svg>
     </label>
-
     <label class="xs-block">
         <svg class="tablet mobile-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M19,18H5V6H19M21,4H3C1.89,4 1,4.89 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18V6C23,4.89 22.1,4 21,4Z" />
         </svg>
     </label>
-
     <label class="xs-block">
-        <svg class="desktop feather mobile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="desktop feather mobile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
           <line x1="8" y1="21" x2="16" y2="21"></line>
           <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -87,7 +90,7 @@
       </svg>
     </a>
     <a href="mailto:azuolas.krusna@yahoo.com" class="xs-block">
-      <svg class="feather mobile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="feather mobile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="4"></circle>
         <path d="M16 12v1a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
       </svg>
@@ -119,9 +122,13 @@
 <script type="text/javascript" src="js/helpers.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
 <script type="text/javascript" src="js/drag-scroll.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/cross-platform.js"></script>
-<!-- <script type="text/javascript" src="js/time-list.js"></script> -->
+<script type="text/javascript" src="js/components/list.js"></script>
+<script type="text/javascript" src="js/components/add-list.js"></script>
+<script type="text/javascript" src="js/components/list-head.js"></script>
+<script type="text/javascript" src="js/resume.js"></script>
+<script type="text/javascript" src="js/components/show-list.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

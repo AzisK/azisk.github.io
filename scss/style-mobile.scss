@@ -1,4 +1,12 @@
 @media (max-width: 414px) {
+  h1  {
+    font-size: 38px;
+  }
+
+  .not-xs-hidden {
+    display: inherit !important;
+  }
+
   .heading {
     h1, h2 {
       margin: 0;
@@ -8,15 +16,34 @@
 
   .resume svg {
     width: 42px;
+
+    &.feather:hover {
+      width: 42px;
+    }
   }
 
   .resume-nav {
+    height: auto;
+
+
     :first-child {
       text-align: left;
     }
 
     :last-child {
       text-align: right;
+    }
+  }
+
+  .resume-content {
+    padding: 0 20px;
+
+    ul {
+      text-align: center;
+
+      li {
+        display: none;
+      }
     }
   }
 

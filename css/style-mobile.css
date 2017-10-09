@@ -1,15 +1,32 @@
 @media (max-width: 414px) {
+  h1 {
+    font-size: 38px; }
+
+  .not-xs-hidden {
+    display: inherit !important; }
+
   .heading h1, .heading h2 {
     margin: 0;
     display: block; }
 
   .resume svg {
     width: 42px; }
+    .resume svg.feather:hover {
+      width: 42px; }
 
-  .resume-nav :first-child {
-    text-align: left; }
-  .resume-nav :last-child {
-    text-align: right; }
+  .resume-nav {
+    height: auto; }
+    .resume-nav :first-child {
+      text-align: left; }
+    .resume-nav :last-child {
+      text-align: right; }
+
+  .resume-content {
+    padding: 0 20px; }
+    .resume-content ul {
+      text-align: center; }
+      .resume-content ul li {
+        display: none; }
 
   .iphone-button {
     display: none; }
