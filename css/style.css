@@ -14,8 +14,6 @@ html, body {
 body {
   margin: 0;
   background: #E5E4ED; }
-  body ::-webkit-scrollbar {
-    display: none; }
 
 * {
   transition: 200ms;
@@ -30,6 +28,11 @@ h2 {
   letter-spacing: 2px;
   font-family: 'Pangolin', cursive;
   font-size: 36px; }
+
+h3 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-family: 'Indie Flower', cursive; }
 
 .col-30 {
   width: 30%;
@@ -81,18 +84,12 @@ svg.feather:hover {
 .arrow {
   width: 42px; }
 
-/*ul {
+ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0; }
+  ul li {
+    padding: 2px 10px; }
 
-  li {
-    padding: 2px 10px;
-  }
-
-  li:hover {
-    background: $greyviolet;
-  }
-}*/
 .main-page, .html {
   position: relative;
   height: 100%;
@@ -142,35 +139,31 @@ svg.feather:hover {
   height: calc(100% - 120px);
   width: 100%;
   top: 120px;
-  position: absolute;
-  /*:hover svg {
-    width: 48px;
-  }
-
-  :hover svg + div {
-    font-size: 24px;
-  }
-
-  :hover ul {
-    display: block;
-  }*/ }
+  position: absolute; }
   .resume div ul {
-    display: none;
-    overflow-y: auto; }
+    overflow-y: scroll; }
     .resume div ul h3 {
-      margin: 5px 0; }
+      margin: 10px 0; }
   .resume div div {
     display: inline-block;
     vertical-align: middle; }
-    .resume div div h2 {
-      margin: 5px 0;
-      padding-left: 5px; }
 
-.curriculum {
+.resume-nav, .resume-content {
   position: relative;
   top: 20px;
   padding: 0 60px;
   text-align: center; }
+
+.resume-content h1 {
+  margin: auto; }
+.resume-content ul {
+  text-align: left; }
+  .resume-content ul li:hover {
+    background: #244ad6;
+    background: -moz-linear-gradient(left, #244ad6 0%, #19e876 100%);
+    background: -webkit-linear-gradient(left, #244ad6 0%, #19e876 100%);
+    background: linear-gradient(to right, #244ad6 0%, #19e876 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#244ad6', endColorstr='#19e876',GradientType=1); }
 
 .bottom-right {
   position: absolute;

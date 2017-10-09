@@ -6,9 +6,9 @@
   .resume svg {
     width: 42px; }
 
-  .curriculum :first-child {
+  .resume-nav :first-child {
     text-align: left; }
-  .curriculum :last-child {
+  .resume-nav :last-child {
     text-align: right; }
 
   .iphone-button {

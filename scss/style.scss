@@ -23,9 +23,9 @@ html, body {
 body {
   margin: 0;
   background: $device-color;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  // ::-webkit-scrollbar {
+  //   display: none;
+  // }
 }
 
 * {
@@ -45,6 +45,12 @@ h2 {
   font-size: 36px;
 }
 
+h3 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-family: 'Indie Flower', cursive;
+}
+
 .col-30 {
   width: 30%;
   display: inline-table;
@@ -60,7 +66,7 @@ h2 {
 
 .hover-color:hover {
   color: $hover-color;
-} 
+}
 
 svg.feather {
   path {
@@ -76,7 +82,6 @@ svg {
     fill: #fff;
   }
 }
-
 
 svg:hover path {
   fill: $hover-color;
@@ -105,7 +110,7 @@ svg.feather:hover {
 
   svg:hover {
     width: 100px;
-  } 
+  }
 }
 
 .footer {
@@ -123,18 +128,14 @@ svg.feather:hover {
   width: 42px;
 }
 
-/*ul {
+ul {
   list-style-type: none;
   padding: 0;
 
   li {
     padding: 2px 10px;
   }
-
-  li:hover {
-    background: $greyviolet;
-  }
-}*/
+}
 
 .main-page, .html {
   position: relative;
@@ -164,7 +165,7 @@ svg.feather:hover {
     margin: auto;
     text-align: center;
     color: #fff;
-  } 
+  }
 }
 
 .heading {
@@ -185,7 +186,7 @@ svg.feather:hover {
 
   h1  {
     margin-top: 20px;
-    margin-right: 40px; 
+    margin-right: 40px;
   }
 }
 
@@ -197,42 +198,42 @@ svg.feather:hover {
 
   div {
     ul {
-      display: none;
-      overflow-y: auto;
+      overflow-y: scroll;
       h3 {
-        margin: 5px 0;
+        margin: 10px 0;
       }
     }
 
     div {
       display: inline-block;
       vertical-align: middle;
-
-      h2  {
-        margin: 5px 0;
-        padding-left: 5px;
-      }
     }
   }
-
-  /*:hover svg {
-    width: 48px;
-  }
-
-  :hover svg + div {
-    font-size: 24px;
-  }
-
-  :hover ul {
-    display: block;
-  }*/
 }
 
-.curriculum {
+.resume-nav, .resume-content {
   position: relative;
   top: 20px;
   padding: 0 60px;
   text-align: center;
+}
+
+.resume-content {
+  h1 {
+    margin: auto;
+  }
+
+  ul {
+    text-align: left;
+
+    li:hover {
+      background: #244ad6;
+      background: -moz-linear-gradient(left,  #244ad6 0%, #19e876 100%);
+      background: -webkit-linear-gradient(left,  #244ad6 0%,#19e876 100%);
+      background: linear-gradient(to right,  #244ad6 0%,#19e876 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#244ad6', endColorstr='#19e876',GradientType=1);
+    }
+  }
 }
 
 .bottom-right {
