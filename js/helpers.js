@@ -2,6 +2,7 @@ var mainPage = s('.heading');
 var designPage = s('.design-page');
 var view = s('.view');
 var mapCanvas = s('.map');
+var skillsText = s('.skills-text');
 
 var fit = s('.fit');
 
@@ -9,7 +10,7 @@ var scrollIn = function (div) {
   div.scrollIntoView({ behavior: "smooth"});
 };
 
-var animateText = function (target, message, index, interval) { 
+function animateText (target, message, index, interval) { 
   var targetSelector = s(target);
   if (index < message.length) {
     targetSelector.append(message[index++]);

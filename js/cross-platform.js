@@ -41,22 +41,16 @@ var mobileView = function (on) {
       mobile = true
       el.classList.add('block-mobile');
       el.querySelector('svg').classList.add('block-svg');
+      s('.arrow').style.bottom = '80px';
     } else {
       mobile = false;
       if (el.classList.contains('block-mobile')) {
         el.classList.remove('block-mobile');
         el.querySelector('svg').classList.remove('block-svg');
+        s('.arrow').style.bottom = '';
       }
     }
   });
-  var heading = document.querySelector('.heading h1');
-  if (mobile) {
-    heading.classList.add('mobile-heading');
-  } else {
-    if (heading.classList.contains('mobile-heading')) {
-      heading.classList.remove('mobile-heading');
-    }
-  }
 }
 
 var touchView = function (on) {

@@ -4,13 +4,6 @@
     font-size: 38px;
   }
 
-  .heading {
-    h1, h2 {
-      margin: 0;
-      display: block;
-    }
-  }
-
   .resume svg {
     width: 42px;
 
@@ -31,18 +24,6 @@
       &.feather:hover {
         width: 34px;
         stroke: #fff;
-      }
-    }
-  }
-
-  .resume-content {
-    .list {
-      text-align: center;
-      h3 {
-        margin: 5px 30px;
-      }
-      div {
-        display: none;
       }
     }
   }

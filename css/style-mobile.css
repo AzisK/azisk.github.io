@@ -2,10 +2,6 @@
   h1 {
     font-size: 38px; }
 
-  .heading h1, .heading h2 {
-    margin: 0;
-    display: block; }
-
   .resume svg {
     width: 42px; }
     .resume svg.feather:hover {
@@ -20,13 +16,6 @@
     .resume-content-nav > svg.feather:hover {
       width: 34px;
       stroke: #fff; }
-
-  .resume-content .list {
-    text-align: center; }
-    .resume-content .list h3 {
-      margin: 5px 30px; }
-    .resume-content .list div {
-      display: none; }
 
   .active-mobile {
     background: linear-gradient(to right, #244ad6 0%, #19e876 100%); }
