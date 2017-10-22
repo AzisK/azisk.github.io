@@ -12,8 +12,6 @@ for (var i = 0; i < goDesign.length; i++) {
   goDesign[i].onclick = function () {goToDesign();}
 }
 
-var sikt = S('.mobile');
-
 var mobile = s('.mobile');
 var tablet = s('.tablet');
 var desktop = s('.desktop');
@@ -101,7 +99,7 @@ function deviceView (mode) {
   var deviceMode = mode.classList[0] + '-view';
   var currentMode = device.classList[0];
   responsiveView(currentMode, deviceMode);  
-  scrollIn(mainPage);
+  scrollIn(headings);
 };
 
 (function addViews () {
@@ -113,5 +111,5 @@ function deviceView (mode) {
 }());
 
 iphoneButton.onclick = function () {
-  scrollIn(mainPage);
+  scrollIn(headings);
 }
