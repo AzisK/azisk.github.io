@@ -17,6 +17,7 @@ function educationList () {
 function jobList () {
   var jobList = [];
   var jobs = [
+    ['Software Engineer', 'Kayak', 'https://www.kayak.com/', 'Since 2018 January', "Helping people travel the world."],
     ['Software Engineer', 'Icybit', 'https://icybit.co/', '2017 April-September', "Working my ass off further enriching my skills as a developer. Maintaining and updating mainly the front-end of a huge b2b e-commerce shop for most of the time. Later on working on analysis for tons of data."],
     ['Software Engineer Intern', 'Valuetech', 'http://www.valuetech.eu/', '2017 January-April', 'Giving it all to learning to code. My web development career starts from here. "Started from the bottom, now we`re here."'],
     ['Junior Laboratory Coordinator', 'KTU', 'https://ktu.edu/', '2016 Autumn', 'Demonstrations of picturesque and interactive physics and chemistry experiments to students.'],
