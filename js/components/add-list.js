@@ -18,7 +18,7 @@ function jobList () {
   var jobList = [];
   var jobs = [
     ['Data Engineer', 'Kayak', 'https://www.kayak.com/', ' Since 2018 October', "Taking care of SEO data."],
-    ['Software Engineer', 'Kayak', 'https://www.kayak.com/', '2018 January - 2018 October', "Helping people travel the world."],
+    ['Software Engineer', 'Kayak', 'https://www.kayak.com/', '2018 January-October', "Helping people travel the world."],
     ['Software Engineer', 'Icybit', 'https://icybit.co/', '2017 April-September', "Maintaining a huge b2b e-commerce shop and later analising loads of communications data."],
     ['Software Engineer Intern', 'Valuetech', 'http://www.valuetech.eu/', '2017 January-April', 'Software engineering internship in an Italy.'],
     ['Junior Laboratory Coordinator', 'KTU', 'https://ktu.edu/', '2016 Autumn', 'Demonstrations of picturesque and interactive physics and chemistry experiments to students.'],
