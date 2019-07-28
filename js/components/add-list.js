@@ -19,10 +19,10 @@ function jobList () {
   var jobs = [
     ['Data Engineer', 'Kayak', 'https://www.kayak.com/', ' Since 2018 October', "Taking care of SEO data."],
     ['Software Engineer', 'Kayak', 'https://www.kayak.com/', '2018 January - 2018 October', "Helping people travel the world."],
-    ['Software Engineer', 'Icybit', 'https://icybit.co/', '2017 April-September', "Sweating my bum off further enriching my skills as a developer. Maintaining and updating mainly the front-end of a huge b2b e-commerce shop for most of the time. Later on working on analysis for tons of data."],
+    ['Software Engineer', 'Icybit', 'https://icybit.co/', '2017 April-September', "Maintaining a huge b2b e-commerce shop and later analising loads of communications data."],
     ['Software Engineer Intern', 'Valuetech', 'http://www.valuetech.eu/', '2017 January-April', 'Software engineering internship in an Italy.'],
     ['Junior Laboratory Coordinator', 'KTU', 'https://ktu.edu/', '2016 Autumn', 'Demonstrations of picturesque and interactive physics and chemistry experiments to students.'],
-    ['Back Waiter', 'P F Changs Hawaii', 'http://www.pfchangshawaii.com/', '2016 Summer', 'Crazy summer surfing and hiking while not serving food in one of the busiest restaurants in the world.']
+    ['Back Waiter', 'P F Changs Hawaii', 'http://www.pfchangshawaii.com/', '2016 Summer', 'Having a crazy summer surfing and hiking while not serving food in one of the busiest restaurants in the world.']
   ];
   makeList(jobList, jobs);
   (function () {
